@@ -29,4 +29,5 @@ jobs:
         destination-username: 'shashankIPG'
         destination-repository: 'repo1'
         destination-directory: '.'
+        destination-branch: 'main'
         commit-email: 'nathankoppel0@gmail.com'
