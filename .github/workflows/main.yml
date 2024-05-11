@@ -22,7 +22,7 @@ jobs:
 #        commit_message: 'A custom message for the commit'
     - name: Push generated webpage to another repository
       #uses: nkoppel/push-files-to-another-repository@v1.1.3
-      uses: ../../
+      uses: ../../Dockerfile
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
