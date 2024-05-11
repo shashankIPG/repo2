@@ -9,14 +9,24 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Pushes test file
-      uses: dmnemec/copy_file_to_another_repo_action@main
+#    - name: Pushes test file
+#      uses: dmnemec/copy_file_to_another_repo_action@main
+#      env:
+#        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#      with:
+#        source_file: 'copy'
+#        destination_repo: 'shashankIPG/repo1'
+#        destination_folder: '.'
+#        user_email: 'example@email.com'
+#        user_name: 'shashank'
+#        commit_message: 'A custom message for the commit'
+    - name: Push generated webpage to another repository
+      uses: nkoppel/push-files-to-another-repository@v1.1.3
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'copy'
-        destination_repo: 'shashankIPG/repo1'
-        destination_folder: '.'
-        user_email: 'example@email.com'
-        user_name: 'shashank'
-        commit_message: 'A custom message for the commit'
+        source-files: 'copy'
+        destination-username: 'shashankIPG'
+        destination-repository: 'repo1'
+        destination-directory: '.'
+        commit-email: 'nathankoppel0@gmail.com'
